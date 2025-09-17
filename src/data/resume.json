@@ -1,0 +1,172 @@
+{
+  "name": "Henry Wagner",
+  "headline": "Software Engineer",
+  "contact": {
+    "email": "htwags22@gmail.com",
+    "phone": "(331) 210-3011",
+    "linkedin": "https://www.linkedin.com/in/henrytwagner",
+    "github": "https://github.com/henrytwagner"
+  },
+  "about": "Computer Science M.S.E./B.S.E. at the University of Michigan (GPA 3.87). Full‑stack engineer with experience in TypeScript/React/Next.js and Kotlin/Spring, shipping reliable, user‑centered products. Interested in scalable systems, data, and thoughtful UX.",
+  "education": [
+    {
+      "school": "University of Michigan",
+      "location": "Ann Arbor, MI",
+      "degree": "M.S.E. Computer Science",
+      "date": "Apr 2026",
+      "coursework": [
+        "Machine Learning",
+        "Computer Vision",
+        "Parallel Computing",
+        "Human Computer Interaction",
+        "Cryptography",
+        "Applied AI in XR"
+      ]
+    },
+    {
+      "school": "University of Michigan",
+      "location": "Ann Arbor, MI",
+      "degree": "B.S.E. Computer Science",
+      "date": "Apr 2025",
+      "gpa": "3.87 / 4.00",
+      "honors": [
+        "6-semester Dean’s List & University Honors",
+        "James B Angel Scholar",
+        "Department of Engineering Scholarship of Honor"
+      ],
+      "coursework": [
+        "Web Systems",
+        "Database and Information Systems",
+        "Cryptography",
+        "UI/UX Development",
+        "Programming & Data Structures",
+        "Data Structures & Algorithms",
+        "Machine Architecture & Assembly",
+        "CS Theory",
+        "Multivariable Calculus",
+        "Differential Equations",
+        "Linear Algebra",
+        "Discrete Mathematics",
+        "Statistics",
+        "Physics",
+        "Electrical Circuits & Systems"
+      ]
+    }
+  ],
+  "skills": [
+    "C / C++",
+    "Python",
+    "Kotlin / Java",
+    "TypeScript",
+    "HTML / CSS",
+    "Spring MVC",
+    "React",
+    "Next.js",
+    "Django",
+    "JUnit / Jest",
+    "PyTorch",
+    "Postgres",
+    "Cassandra",
+    "MATLAB",
+    "Mathematica",
+    "AWS EC2 / RDS / S3",
+    "Kafka",
+    "Datadog",
+    "Git / GitHub",
+    "GitHub Copilot",
+    "Gradle / Docker / Kubernetes",
+    "Cross Cultural Communication",
+    "Open Source Development",
+    "Agile / Scrum / Waterfall"
+  ],
+  "experience": [
+    {
+      "company": "W.W. Grainger Inc.",
+      "location": "Chicago, IL",
+      "title": "Software Engineer Intern — Customer Information Management Team",
+      "dates": "Jun 2025 — Aug 2025",
+      "bullets": [
+        "Built dynamic Next.js + TypeScript form with conditional field logic, state-dependent validation, and SAP-integrated submission flow",
+        "Reduced manual account intervention by 78% via backend-controlled escalation paths and automated reviewer queue logic",
+        "Integrated external D&B and address verification APIs into Kotlin + Spring Boot services; developed custom endpoints to process, prioritize, and expose validation results for frontend consumption",
+        "Implemented AWS SES email triggers for system events and integrated LaunchDarkly flags across API and UI layers",
+        "Wrote unit/integration tests using Jest and Spring Test; used Datadog monitors and Slack alerts for error tracing in production"
+      ]
+    },
+    {
+      "company": "Grubhub Inc.",
+      "location": "Chicago, IL",
+      "title": "Software Engineer Intern — Merchant Data and Global Menu Team",
+      "dates": "Jun 2024 — Aug 2024",
+      "bullets": [
+        "Identified performance issues in a large-scale, customer-facing application and collaborated to determine optimal solutions",
+        "Managed and troubleshot test environments to better align with production conditions",
+        "Conducted rigorous code review and testing to ensure high code quality before promotion to production",
+        "Developed a tool to enable improved code management via an intuitive UI for toggling variables",
+        "Built RESTful API endpoints and CLI tools to make product data easier to access and modify"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Census — Contact & Networking Management Platform",
+      "description": "Full‑stack web app with Next.js (TypeScript) frontend and Spring Boot REST API backend for managing professional contacts and organizations",
+      "tech": [
+        "Next.js",
+        "TypeScript",
+        "Spring Boot",
+        "PostgreSQL",
+        "JWT",
+        "React",
+        "Zod",
+        "react-hook-form"
+      ],
+      "bullets": [
+        "Designed and implemented scalable data models with many-to-many associations and metadata (roles, join dates), with validation schemas and secure authentication (Spring Security + JWTs)",
+        "Built reusable, production-quality frontend components and validated API contracts via TDD (JUnit, WebMvc)",
+        "Preparing AWS deployment (EC2, RDS, S3) with CI/CD pipelines"
+      ]
+    },
+    {
+      "name": "Machine Learning Forum Classifier",
+      "description": "Classifier for forum posts achieving 85% accuracy using NLP features (content and length)",
+      "tech": ["Python", "PyTorch"],
+      "bullets": [
+        "Led data training and fine-tuning to accurately categorize posts, improving UX and navigation"
+      ]
+    },
+    {
+      "name": "Euchre (C++)",
+      "description": "Object‑oriented Euchre card game with multiple gameplay modes including AI opponent",
+      "tech": ["C++"],
+      "bullets": [
+        "Applied modular OOP design and strategic algorithms for competitive gameplay"
+      ]
+    },
+    {
+      "name": "Assembly Language Development Suite",
+      "description": "Assembler, simulator, linker, and cache simulator to support assembly programming",
+      "tech": ["C / C++"],
+      "bullets": [
+        "Simulated basic single-cycle, multi-cycle, and pipelined processors to deepen understanding of architectures"
+      ]
+    }
+  ],
+  "involvement": [
+    {
+      "name": "V1 — Software Startup Club",
+      "dates": "Aug 2022 — Present",
+      "bullets": [
+        "Engage with peers to learn about tech entrepreneurship and the software development lifecycle",
+        "Network with industry professionals to gain insights into practical engineering methodologies"
+      ]
+    },
+    {
+      "name": "Michigan Youth Sports Initiative — Volunteer/Mentor",
+      "dates": "Jan 2023 — Present",
+      "bullets": [
+        "Organize and support youth sports events, emphasizing community involvement and leadership"
+      ]
+    }
+  ]
+}
