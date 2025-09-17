@@ -7,7 +7,7 @@
     "linkedin": "https://www.linkedin.com/in/henrytwagner",
     "github": "https://github.com/henrytwagner"
   },
-  "about": "Computer Science M.S.E./B.S.E. at the University of Michigan (GPA 3.87). Full‑stack engineer with experience in TypeScript/React/Next.js and Kotlin/Spring, shipping reliable, user‑centered products. Interested in scalable systems, data, and thoughtful UX.",
+  "about": "Computer Science M.S.E./B.S.E. at the University of Michigan (GPA 3.9). Full‑stack engineer with experience in TypeScript/React/Next.js and Kotlin/Spring, shipping reliable, user‑centered products. Interested in scalable systems, data, and thoughtful UX.",
   "education": [
     {
       "school": "University of Michigan",
@@ -53,31 +53,257 @@
       ]
     }
   ],
-  "skills": [
-    "C / C++",
-    "Python",
-    "Kotlin / Java",
-    "TypeScript",
-    "HTML / CSS",
-    "Spring MVC",
-    "React",
-    "Next.js",
-    "Django",
-    "JUnit / Jest",
-    "PyTorch",
-    "Postgres",
-    "Cassandra",
-    "MATLAB",
-    "Mathematica",
-    "AWS EC2 / RDS / S3",
-    "Kafka",
-    "Datadog",
-    "Git / GitHub",
-    "GitHub Copilot",
-    "Gradle / Docker / Kubernetes",
-    "Cross Cultural Communication",
-    "Open Source Development",
-    "Agile / Scrum / Waterfall"
+
+  "skillsCategorized": [
+    {
+      "category": "Programming Languages",
+      "items": [
+        {
+          "label": "C",
+          "note": "Applied in systems-level programming and performance-oriented projects."
+        },
+        {
+          "label": "C++",
+          "note": "Used for data structures, algorithms, and backend logic in technical projects."
+        },
+        {
+          "label": "Python",
+          "note": "Applied in backend development and scripting at Grubhub and in personal projects."
+        },
+        {
+          "label": "Java",
+          "note": "Used in backend services and testing environments at Grubhub."
+        },
+        {
+          "label": "JavaScript",
+          "note": "Applied in React/Next.js frontend development for Census and other personal projects."
+        },
+        {
+          "label": "Kotlin",
+          "note": "Applied in backend services and repositories at Grainger, Grubhub, and Census."
+        },
+        {
+          "label": "R",
+          "note": "Used for statistical modeling and data analysis."
+        },
+        {
+          "label": "MATLAB",
+          "note": "Applied in simulations, numerical analysis, and scientific computing tasks."
+        },
+        {
+          "label": "Mathematica",
+          "note": "Used for symbolic math and modeling tasks."
+        },
+        {
+          "label": "ARM & x86 Assembly",
+          "note": "Applied in low-level programming and architecture-focused projects."
+        },
+        {
+          "label": "HTML/CSS",
+          "note": "Core technologies for web development, applied in Census and other personal projects."
+        }
+      ]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": [
+        {
+          "label": "Spring Boot",
+          "note": "Built and maintained REST APIs, services, and repositories at Grainger, Grubhub, and Census."
+        },
+        {
+          "label": "Flask",
+          "note": "Applied in lightweight backend development for web applications."
+        },
+        {
+          "label": "Django",
+          "note": "Explored for building fullstack applications with React."
+        },
+        {
+          "label": "React",
+          "note": "Used extensively in Census frontend and other personal web apps."
+        },
+        {
+          "label": "Angular",
+          "note": "Explored in personal learning projects alongside .NET."
+        },
+        {
+          "label": "Tailwind CSS",
+          "note": "Applied in Census project for responsive theming and light/dark mode support."
+        },
+        {
+          "label": "Figma",
+          "note": "Used for prototyping and UI/UX design in Census and IBD Fighter."
+        },
+        {
+          "label": "Illustrator",
+          "note": "Created branding and logos, including IBD Fighter’s design identity."
+        }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        {
+          "label": "PostgreSQL",
+          "note": "Primary database for Census backend."
+        },
+        {
+          "label": "SQLite",
+          "note": "Applied in lightweight prototypes and smaller web apps."
+        },
+        {
+          "label": "Cassandra",
+          "note": "Worked with distributed data systems during Grubhub internship."
+        },
+        {
+          "label": "Mongoose",
+          "note": "Used for ODM integration in a project management app backend."
+        }
+      ]
+    },
+    {
+      "category": "Testing & CI/CD",
+      "items": [
+        {
+          "label": "JUnit / Mockito",
+          "note": "Applied in backend testing for Java/Kotlin services at Grubhub and Grainger."
+        },
+        {
+          "label": "Jest",
+          "note": "Used in frontend testing for Census and personal web projects."
+        },
+        {
+          "label": "Gradle / Jenkins",
+          "note": "Supported build automation and CI/CD pipelines at Grubhub and Grainger."
+        },
+        {
+          "label": "LaunchDarkly",
+          "note": "Managed and cleaned up feature flags in production systems at Grainger and Grubhub."
+        }
+      ]
+    },
+    {
+      "category": "DevOps, Cloud & Deployment",
+      "items": [
+        {
+          "label": "AWS",
+          "note": "Integrated services like SES and RDS at Grainger and Grubhub; deployment planning with ECS/ECR for Census."
+        },
+        {
+          "label": "Docker",
+          "note": "Used to containerize applications and set up local/prod workflows at Grubhub, Grainger, and Census."
+        },
+        {
+          "label": "Kubernetes / Spinnaker",
+          "note": "Worked with container orchestration and deployment pipelines at Grubhub and Grainger."
+        },
+        {
+          "label": "Swagger/OpenAPI",
+          "note": "Documented APIs for integration in Census and internship projects."
+        },
+        {
+          "label": "JWT Auth",
+          "note": "Implemented secure authentication in Census backend and applied similar patterns in internships."
+        }
+      ]
+    },
+    {
+      "category": "Data & Machine Learning",
+      "items": [
+        {
+          "label": "PyTorch",
+          "note": "Explored through personal ML experiments with model building."
+        },
+        {
+          "label": "AI/ML fundamentals",
+          "note": "Explored through cryptography, computer vision, and HCI-related projects."
+        }
+      ]
+    },
+    {
+      "category": "Development Practices",
+      "items": [
+        {
+          "label": "Agile / Scrum / Waterfall methodologies",
+          "note": "Applied in team-based projects and workflows at Grubhub, Grainger, and Census."
+        },
+        {
+          "label": "Domain-driven design",
+          "note": "Implemented in backend systems at Grubhub, Grainger, and Census."
+        },
+        {
+          "label": "Service/repository layering",
+          "note": "Applied in backend architecture at Grubhub, Grainger, and Census."
+        },
+        {
+          "label": "Test-driven development",
+          "note": "Practiced while building backend services at Grubhub, Grainger, and Census."
+        },
+        {
+          "label": "DTO structuring",
+          "note": "Applied in API design for Census and internship projects."
+        },
+        {
+          "label": "Version control",
+          "note": "Used extensively across all projects and internships with Git/GitHub."
+        }
+      ]
+    },
+    {
+      "category": "Other Technical & Creative Tools",
+      "items": [
+        {
+          "label": "LaTeX",
+          "note": "Prepared technical documentation and research reports."
+        },
+        {
+          "label": "Blender",
+          "note": "Created 3D models, animations, and visualizations, including experiments with data visualization."
+        },
+        {
+          "label": "Unity (C#)",
+          "note": "Built VR/AR prototypes with locomotion and tracking adjustments."
+        },
+        {
+          "label": "Unreal Engine",
+          "note": "Explored as a creative and technical sandbox for future projects."
+        },
+        {
+          "label": "Apple ecosystem",
+          "note": "Designed polished presentations and media content with Keynote and Apple Photos."
+        }
+      ]
+    },
+    {
+      "category": "Soft/Transferable Skills",
+      "items": [
+        {
+          "label": "UI/UX design",
+          "note": "Applied in Census and IBD Fighter for interface design and user experience."
+        },
+        {
+          "label": "Qualitative data analysis",
+          "note": "Synthesized interview data into affinity diagrams for a career development research project."
+        },
+        {
+          "label": "Project management & documentation",
+          "note": "Coordinated deliverables and documentation for internships and personal projects like Census."
+        },
+        {
+          "label": "Entrepreneurial product design",
+          "note": "Created, iterated, and prototyped Census and IBD Fighter."
+        },
+        {
+          "label": "Cross-cultural communication",
+          "note": "Developed through study abroad and international team collaboration."
+        },
+        {
+          "label": "Mentorship/collaboration",
+          "note": "Practiced during Grubhub and Grainger internships and in team-based projects."
+        }
+      ]
+    }
   ],
   "experience": [
     {

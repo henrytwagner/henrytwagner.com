@@ -37,6 +37,10 @@ type ResumeData = {
   experience?: ExperienceItem[];
   projects?: ProjectItem[];
   skills?: string[];
+  skillsCategorized?: Array<{
+    category: string;
+    items: Array<{ label: string; note?: string }>;
+  }>;
   involvement?: Array<{
     name: string;
     dates?: string;
@@ -62,11 +66,15 @@ export default function Home() {
   const education = data?.education || [];
   const involvement = data?.involvement || [];
   const contact = data?.contact;
+  const skillsCategorized = data?.skillsCategorized || [];
   return (
     <div className="font-sans min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a href="#hero" className="font-semibold">
+          <a
+            href="#hero"
+            className="font-semibold text-[var(--accent)] hover:opacity-80"
+          >
             Henry T. Wagner
           </a>
           <nav className="hidden sm:flex gap-6 text-sm">
@@ -118,7 +126,7 @@ export default function Home() {
           <div className="mt-6 flex gap-3">
             <a
               href="#projects"
-              className="rounded-md bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90"
+              className="rounded-md bg-[var(--accent)] text-background px-4 py-2 text-sm font-medium hover:opacity-90"
             >
               View Projects
             </a>
@@ -126,7 +134,7 @@ export default function Home() {
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-md border border-foreground/20 px-4 py-2 text-sm hover:bg-foreground/5"
+              className="rounded-md border border-[var(--accent)]/40 px-4 py-2 text-sm hover:bg-[var(--accent)]/10"
             >
               Download Resume
             </a>
@@ -135,7 +143,7 @@ export default function Home() {
             <div className="mt-8 grid gap-3 text-sm sm:grid-cols-2">
               {contact.email && (
                 <div className="rounded-lg border border-foreground/10 p-4">
-                  <p className="text-foreground/60">Email</p>
+                  <p className="text-[var(--accent)]">Email</p>
                   <a
                     className="font-medium hover:opacity-80"
                     href={`mailto:${contact.email}`}
@@ -146,7 +154,7 @@ export default function Home() {
               )}
               {contact.phone && (
                 <div className="rounded-lg border border-foreground/10 p-4">
-                  <p className="text-foreground/60">Phone</p>
+                  <p className="text-[var(--accent)]">Phone</p>
                   <a
                     className="font-medium"
                     href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}
@@ -157,7 +165,7 @@ export default function Home() {
               )}
               {contact.linkedin && (
                 <div className="rounded-lg border border-foreground/10 p-4">
-                  <p className="text-foreground/60">LinkedIn</p>
+                  <p className="text-[var(--accent)]">LinkedIn</p>
                   <a
                     className="font-medium hover:opacity-80"
                     href={contact.linkedin}
@@ -170,7 +178,7 @@ export default function Home() {
               )}
               {contact.github && (
                 <div className="rounded-lg border border-foreground/10 p-4">
-                  <p className="text-foreground/60">GitHub</p>
+                  <p className="text-[var(--accent)]">GitHub</p>
                   <a
                     className="font-medium hover:opacity-80"
                     href={contact.github}
@@ -189,7 +197,7 @@ export default function Home() {
           id="about"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">About</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">About</h2>
           <p className="mt-3 text-foreground/80">{about}</p>
         </section>
 
@@ -197,7 +205,9 @@ export default function Home() {
           id="experience"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Experience</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">
+            Experience
+          </h2>
           <ul className="mt-6 space-y-6">
             {(!Array.isArray(experience) || experience.length === 0) && (
               <li className="text-sm text-foreground/60">
@@ -234,7 +244,9 @@ export default function Home() {
           id="education"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Education</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">
+            Education
+          </h2>
           <ul className="mt-6 space-y-6">
             {education.map((ed, idx) => (
               <li key={idx} className="flex items-start justify-between gap-6">
@@ -273,7 +285,9 @@ export default function Home() {
           id="projects"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Projects</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">
+            Projects
+          </h2>
           <ProjectsSection projects={projects} />
         </section>
 
@@ -281,25 +295,63 @@ export default function Home() {
           id="skills"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Skills</h2>
-          <ul className="mt-4 flex flex-wrap gap-2 text-sm">
-            {Array.isArray(skills) &&
-              skills.slice(0, 30).map((s: string, idx: number) => (
-                <li
-                  key={idx}
-                  className="rounded-full border border-foreground/15 bg-foreground/5 px-3 py-1"
-                >
-                  {s}
-                </li>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">Skills</h2>
+          {skillsCategorized.length > 0 ? (
+            <div className="mt-6 space-y-8">
+              <p className="text-xs text-foreground/60">
+                Hint: hover on skills to see more details.
+              </p>
+              {skillsCategorized.map((group, i) => (
+                <div key={i}>
+                  <h3 className="text-sm uppercase tracking-wider text-foreground/60">
+                    {group.category}
+                  </h3>
+                  <ul className="mt-3 flex flex-wrap gap-2 text-sm">
+                    {group.items.map((item, j) => (
+                      <li
+                        key={j}
+                        className={`group relative rounded-full border bg-foreground/5 px-3 py-1 ${
+                          item.note
+                            ? "border-[var(--accent)]"
+                            : "border-foreground/15"
+                        }`}
+                      >
+                        <span className="inline-flex items-center gap-1">
+                          {item.label}
+                        </span>
+                        {item.note && (
+                          <div className="pointer-events-none absolute left-0 top-full z-20 mt-1 hidden min-w-56 rounded-md border border-foreground/15 bg-background p-2 text-xs text-foreground/80 shadow-lg group-hover:block group-focus-within:block">
+                            {item.note}
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-          </ul>
+            </div>
+          ) : (
+            <ul className="mt-4 flex flex-wrap gap-2 text-sm">
+              {Array.isArray(skills) &&
+                skills.map((s: string, idx: number) => (
+                  <li
+                    key={idx}
+                    className="rounded-full border border-foreground/15 bg-foreground/5 px-3 py-1"
+                  >
+                    {s}
+                  </li>
+                ))}
+            </ul>
+          )}
         </section>
 
         <section
           id="involvement"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Campus & Community</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">
+            Campus & Community
+          </h2>
           <ul className="mt-6 space-y-6">
             {involvement.map((inv, idx) => (
               <li key={idx} className="flex items-start justify-between gap-6">
@@ -327,25 +379,24 @@ export default function Home() {
           id="contact"
           className="mx-auto max-w-5xl px-6 py-16 border-t border-foreground/10"
         >
-          <h2 className="text-xl font-semibold">Contact</h2>
+          <h2 className="text-xl font-semibold text-[var(--accent)]">
+            Contact
+          </h2>
           <p className="mt-3 text-foreground/80">
             Email:{" "}
-            <a
-              className="hover:opacity-80"
-              href="mailto:henry@henrytwagner.com"
-            >
-              henry@henrytwagner.com
+            <a className="hover:opacity-80" href="mailto:htwags22@gmail.com">
+              htwags22@gmail.com
             </a>
           </p>
           <p className="mt-1 text-foreground/80">
             LinkedIn:{" "}
             <a
               className="hover:opacity-80"
-              href="https://www.linkedin.com/in/henrytzwagner"
+              href="https://www.linkedin.com/in/henrytwagner"
               target="_blank"
               rel="noopener noreferrer"
             >
-              linkedin.com/in/henrytzwagner
+              linkedin.com/in/henrytwagner
             </a>
           </p>
           <p className="mt-1 text-foreground/80">
