@@ -137,7 +137,7 @@ export default function Home() {
                 <div className="rounded-lg border border-foreground/10 p-4">
                   <p className="text-foreground/60">Email</p>
                   <a
-                    className="font-medium underline hover:opacity-80"
+                    className="font-medium hover:opacity-80"
                     href={`mailto:${contact.email}`}
                   >
                     {contact.email}
@@ -159,7 +159,7 @@ export default function Home() {
                 <div className="rounded-lg border border-foreground/10 p-4">
                   <p className="text-foreground/60">LinkedIn</p>
                   <a
-                    className="font-medium underline hover:opacity-80"
+                    className="font-medium hover:opacity-80"
                     href={contact.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -172,7 +172,7 @@ export default function Home() {
                 <div className="rounded-lg border border-foreground/10 p-4">
                   <p className="text-foreground/60">GitHub</p>
                   <a
-                    className="font-medium underline hover:opacity-80"
+                    className="font-medium hover:opacity-80"
                     href={contact.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -331,7 +331,7 @@ export default function Home() {
           <p className="mt-3 text-foreground/80">
             Email:{" "}
             <a
-              className="underline hover:opacity-80"
+              className="hover:opacity-80"
               href="mailto:henry@henrytwagner.com"
             >
               henry@henrytwagner.com
@@ -340,7 +340,7 @@ export default function Home() {
           <p className="mt-1 text-foreground/80">
             LinkedIn:{" "}
             <a
-              className="underline hover:opacity-80"
+              className="hover:opacity-80"
               href="https://www.linkedin.com/in/henrytzwagner"
               target="_blank"
               rel="noopener noreferrer"
@@ -351,7 +351,7 @@ export default function Home() {
           <p className="mt-1 text-foreground/80">
             GitHub:{" "}
             <a
-              className="underline hover:opacity-80"
+              className="hover:opacity-80"
               href="https://github.com/henrytwagner"
               target="_blank"
               rel="noopener noreferrer"
