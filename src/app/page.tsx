@@ -53,7 +53,12 @@ export default function Home() {
     data?.about || "I build reliable, user-centered web applications.";
   const experience: ExperienceItem[] = data?.experience || [];
   const projects: ProjectItem[] = data?.projects || [];
-  const skills: string[] = data?.skills || [];
+  const skills: string[] = (data?.skills || []).flatMap((s) =>
+    s
+      .split("/")
+      .map((t) => t.trim())
+      .filter(Boolean)
+  );
   const education = data?.education || [];
   const involvement = data?.involvement || [];
   const contact = data?.contact;

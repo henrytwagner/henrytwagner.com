@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +18,9 @@ export const metadata: Metadata = {
   title: "Henry T. Wagner — Portfolio",
   description:
     "Portfolio of Henry T. Wagner: software engineer, projects, experience, and contact.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://henrytwagner.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://henrytwagner.com"
+  ),
   openGraph: {
     title: "Henry T. Wagner — Portfolio",
     description:
@@ -26,6 +29,14 @@ export const metadata: Metadata = {
     siteName: "Henry T. Wagner",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Henry T. Wagner — Portfolio",
+      },
+    ],
   },
   icons: {
     icon: "/favicon.ico",
@@ -44,6 +55,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
