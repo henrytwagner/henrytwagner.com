@@ -25,13 +25,13 @@
 [data-theme="light"] {
   --background: #ffffff;
   --foreground: #171717;
-  --accent: #2563eb;
+  --accent: #9525eb;
 }
 
 [data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --accent: #60a5fa;
+  --accent: #b861fa;
 }
 
 body {

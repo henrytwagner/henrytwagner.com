@@ -71,10 +71,7 @@ export default function Home() {
     <div className="font-sans min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <a
-            href="#hero"
-            className="font-semibold text-[var(--accent)] hover:opacity-80"
-          >
+          <a href="#hero" className="font-semibold hover:opacity-80">
             Henry T. Wagner
           </a>
           <nav className="hidden sm:flex gap-6 text-sm">
